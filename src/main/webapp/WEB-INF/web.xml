@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <servlet>
+        <servlet-name>Gofordata</servlet-name>
+        <servlet-class>com.dandan.testds.Gofordata</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Gofordata</servlet-name>
+        <url-pattern>/gofordata</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
+  <resource-env-ref>
+    <resource-env-ref-name>datasources/MSSQLDS2</resource-env-ref-name>
+    <resource-env-ref-type>javax.sql.DataSource</resource-env-ref-type>
+    <lookup-name>java:/MSSQLDS2</lookup-name>
+  </resource-env-ref>    
+    
+</web-app>
