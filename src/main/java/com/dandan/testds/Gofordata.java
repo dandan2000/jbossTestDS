@@ -36,6 +36,9 @@ public class Gofordata extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    
+    String DS_NAME = "java:jboss/datasources/ExampleDS";
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, NamingException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
@@ -43,7 +46,7 @@ public class Gofordata extends HttpServlet {
         DataSource ds = null;
         try {
             Context ctx = new InitialContext();
-            ds = (DataSource) ctx.lookup("java:/MSSQLDS2");
+            ds = (DataSource) ctx.lookup(DS_NAME);
         } catch (NamingException e) {
             System.out.println("Naming Exception: " + e);
         }

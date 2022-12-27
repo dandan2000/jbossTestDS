@@ -14,10 +14,10 @@
         </session-timeout>
     </session-config>
     
-  <resource-env-ref>
-    <resource-env-ref-name>datasources/MSSQLDS2</resource-env-ref-name>
-    <resource-env-ref-type>javax.sql.DataSource</resource-env-ref-type>
-    <lookup-name>java:/MSSQLDS2</lookup-name>
-  </resource-env-ref>    
+    <resource-env-ref>
+        <resource-env-ref-name>datasources/ExampleDS</resource-env-ref-name>
+        <resource-env-ref-type>javax.sql.DataSource</resource-env-ref-type>
+        <lookup-name>java:jboss/datasources/ExampleDS</lookup-name>
+    </resource-env-ref>       
     
 </web-app>
